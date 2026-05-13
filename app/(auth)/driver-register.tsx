@@ -17,7 +17,7 @@ import {
   push,
 } from "firebase/database";
 
-import { db } from "../firebaseConfig";
+import { db } from "../../firebaseConfig";
 
 import * as ImagePicker from "expo-image-picker";
 
@@ -391,7 +391,7 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: "#121212",
+    backgroundColor: "#99e5f5",
     padding: 20,
   },
 
@@ -405,7 +405,7 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    backgroundColor: "#1E1E1E",
+    backgroundColor: "#98e5f8",
     color: "white",
     padding: 18,
     borderRadius: 15,
@@ -430,7 +430,7 @@ const styles = StyleSheet.create({
   },
 
   uploadButton: {
-    backgroundColor: "#424242",
+    backgroundColor: "#aaf5f7",
     padding: 16,
     borderRadius: 12,
     alignItems: "center",

@@ -18,7 +18,7 @@ import {
   update,
 } from "firebase/database";
 
-import { db } from "../firebaseConfig";
+import { db } from "../../firebaseConfig";
 
 import { router } from "expo-router";
 

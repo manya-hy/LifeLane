@@ -1,49 +1,49 @@
-import {
+import React, {
   createContext,
-  useState,
-  ReactNode,
   useContext,
+  useState,
 } from "react";
 
+import { translations } from "../translations";
+
 type LanguageType =
-  "English" |
-  "Kannada" |
-  "Hindi";
+  | "English"
+  | "Kannada"
+  | "Hindi";
 
-interface LanguageContextType {
-
+type ContextType = {
   language: LanguageType;
-
-  setLanguage:
-    (lang: LanguageType) => void;
-}
+  setLanguage: (lang: LanguageType) => void;
+  t: typeof translations.English;
+};
 
 const LanguageContext =
-  createContext<LanguageContextType>({
+  createContext<ContextType>({
     language: "English",
     setLanguage: () => {},
+    t: translations.English,
   });
 
 export const LanguageProvider = ({
   children,
 }: {
-  children: ReactNode;
+  children: React.ReactNode;
 }) => {
-
   const [language, setLanguage] =
     useState<LanguageType>("English");
 
-  return (
+  const t = translations[language];
 
+  return (
     <LanguageContext.Provider
       value={{
         language,
         setLanguage,
+        t,
       }}
     >
       {children}
     </LanguageContext.Provider>
-
   );
 };
 

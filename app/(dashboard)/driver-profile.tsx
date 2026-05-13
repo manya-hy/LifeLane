@@ -12,7 +12,7 @@ import {
   onValue,
 } from "firebase/database";
 
-import { db } from "../firebaseConfig";
+import { db } from "../../firebaseConfig";
 
 import {
   useEffect,
